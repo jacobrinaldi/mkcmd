@@ -22,7 +22,7 @@ curl -fsSL https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/install.sh 
 ### Manual Install
 1. Clone the repository:
    ```bash
-   git clone https://github.com
+   git clone https://github.com/jacobrinaldi/mkcmd
    cd mkcmd
    ```
 2. Run the included installer script:
