@@ -36,6 +36,8 @@ validLang = [
     "ruby",
     "lua",
     "php",
+    "perl",
+    "applescript",
 ]
 
 
@@ -43,6 +45,7 @@ validLang = [
 
 def python():
     print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env python3")
+    #==============================================================================#
     t.sleep(2)
     os.chdir(dir)
     os.system(f"mv {fileName}.py {commandName}")
@@ -56,6 +59,7 @@ def python():
 
 def javascript():
     print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env node")
+    #==============================================================================#
     t.sleep(2)
     os.chdir(dir)
     os.system(f"mv {fileName}.js {commandName}")
@@ -70,6 +74,7 @@ def javascript():
 
 def bash():
     print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env bash")
+    #==============================================================================#
     t.sleep(2)
     os.chdir(dir)
     os.system(f"mv {fileName}.sh {commandName}")
@@ -84,6 +89,7 @@ def bash():
 
 def ruby():
     print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env ruby")
+    #==============================================================================#
     t.sleep(2)
     os.chdir(dir)
     os.system(f"mv {fileName}.rb {commandName}")
@@ -98,6 +104,7 @@ def ruby():
 
 def lua():
     print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env lua")
+    #==============================================================================#
     t.sleep(2)
     os.chdir(dir)
     os.system(f"mv {fileName}.lua {commandName}")
@@ -111,6 +118,7 @@ def lua():
 
 def php():
     print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env php")
+    #==============================================================================#
     t.sleep(2)
     os.chdir(dir)
     os.system(f"mv {fileName}.php {commandName}")
@@ -118,6 +126,34 @@ def php():
     os.system(f"sudo mv {commandName} /usr/local/bin")
     os.chdir(dir)
     os.system(f'sudo cp "{fileName}.php /usr/local/bin"')
+    os.system(f'sudo chmod +x "/usr/local/bin/{commandName}"')
+
+#perl function
+
+def perl():
+    print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env perl")
+    #==============================================================================#
+    t.sleep(2)
+    os.chdir(dir)
+    os.system(f"mv {fileName}.pl{commandName}")
+    os.system(f"chmod +x {commandName}")
+    os.system(f"sudo mv {commandName} /usr/local/bin")
+    os.chdir(dir)
+    os.system(f'sudo cp "{fileName}.pl /usr/local/bin"')
+    os.system(f'sudo chmod +x "/usr/local/bin/{commandName}"')
+
+def applescript():
+    print("MAKE SURE YOUR PROGRAM HAS THE SHEBANG LINE OF #!/usr/bin/env osascript")
+    #==============================================================================#
+    print("MAKE SURE YOUR CODE IS .applescript")
+    #==============================================================================#
+    t.sleep(5)
+    os.chdir(dir)
+    os.system(f"mv {fileName}.applescript {commandName}")
+    os.system(f"chmod +x {commandName}")
+    os.system(f"sudo mv {commandName} /usr/local/bin")
+    os.chdir(dir)
+    os.system(f'sudo cp "{fileName}.applescript /usr/local/bin"')
     os.system(f'sudo chmod +x "/usr/local/bin/{commandName}"')
 
 #main function
@@ -136,5 +172,9 @@ def main():
             lua()
         elif lang.lower() == "php":
             php()
+        elif lang.lower() == "perl":
+            perl()
+        elif lang.lower() == "applecode":
+            applecode()
 
 main()
