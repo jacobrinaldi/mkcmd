@@ -26,7 +26,6 @@ Make many langues into commands with ease
    ```
 3. Enter the prompted details:
    * **File name** (without the file extension)
-   * **Language** (`python`, `javascript`, `bash`, `ruby`, or `lua`)
    * **Project path** (use `.` if you are already inside the folder)
    * **Command name** (the command you want to type in your terminal)
 
