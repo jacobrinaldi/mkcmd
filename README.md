@@ -5,11 +5,8 @@ Make many langues into commands with ease
 
 ## Install
 
-**### Automatic install
-curl -fsSL https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/install.sh | bash
+## Automatic Install
 
-
-   bash
 ``curl -fsSL https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/install.sh | bash
 ``
 
