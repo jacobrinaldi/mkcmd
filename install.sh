@@ -2,15 +2,15 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Mkcmd will ask for sudo to install"
+echo "Installing mkcmd..."
 
-sudo mkdir -p /usr/local/bin
-
-sudo curl -fsSL \
+curl -fsSL \
   https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/main.py \
-  -o /usr/local/bin/mkcmd
+  -o /tmp/mkcmd
 
-sudo chmod +x /usr/local/bin/mkcmd
+sudo install -m 755 /tmp/mkcmd /usr/local/bin/mkcmd
+
+rm /tmp/mkcmd
 
 echo "mkcmd installed successfully!"
 echo "Run 'mkcmd' to get started."
