@@ -1,48 +1,139 @@
-# MKCMD
+#mkcmd
 
-Make many langues into commands with ease
+Turn your scripts into commands you can run from anywhere.
+
+mkcmd lets you create terminal commands from your own scripts, making it easier to run your projects without remembering long file paths.
+
+Features
+Turn scripts into terminal commands.
+Run commands from anywhere in your terminal.
+Simple installation.
+Supports multiple scripting languages (where implemented).
+Installation
+Linux
+
+Option 1: Install using the installation script (recommended)
+
+Clone the repository:
+
+bash
+git clone https://github.com/jacobrinaldi/mkcmd.git
+cd mkcmd
 
 
-## Install
+Make the installer executable:
+
+bash
+chmod +x install.sh
 
 
-### Manual Install
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/jacobrinaldi/mkcmd
-   cd mkcmd
-   ```
-2. Run the included installer script:
-   ```bash
-   chmod +x install.sh
-   ./install.sh
+Run the installer:
 
-## Usage
+bash
+./install.sh
 
-1. Add the required shebang line to Line 1 of your script.
-2. Run `mkcmd` from anywhere in your terminal:
-   ```bash
-   mkcmd
-   ```
-3. Enter the prompted details:
-   * **File name** (without the file extension)
-   * **Project path** (use `.` if you are already inside the folder)
-   * **Command name** (the command you want to type in your terminal)
 
-## Uninstall
+The installer downloads the latest main.py and installs it into /usr/local/bin/mkcmd.
 
-To remove `mkcmd` from your system:
-```bash
-sudo rm /usr/local/bin/mkcmd
-```
+You will be asked for your sudo password when the installer installs the command.
 
-### Language and feature requests
+Option 2: Manual installation
 
-Any language or feature requests? You can open an issue or email me at jacob.a.rinaldi@gmail.com
+If the installation script doesn't work, you can install manually:
 
-### Planned and upcoming features
+bash
+curl -fL https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/main.py -o /tmp/mkcmd
+sudo install -m 755 /tmp/mkcmd /usr/local/bin/mkcmd
+rm /tmp/mkcmd
 
-1. Windows support
-2. Uninstalling commands you have made
-3. Automaticly adding an install.sh file to your project folder to make your project much simpler to set up for others
-4. More languages!
+Verify Installation
+
+Check that mkcmd is installed:
+
+bash
+which mkcmd
+
+
+Start mkcmd:
+
+bash
+mkcmd
+
+Usage
+
+Run:
+
+bash
+mkcmd
+
+
+Follow the interactive prompts to create a command from your script.
+
+Troubleshooting
+curl: command not found
+
+Install curl:
+
+Ubuntu/Debian:
+
+bash
+sudo apt update
+sudo apt install curl
+
+
+Fedora:
+
+bash
+sudo dnf install curl
+
+
+Arch Linux:
+
+bash
+sudo pacman -S curl
+
+Permission denied
+
+Make sure you run the installer with:
+
+bash
+chmod +x install.sh
+./install.sh
+
+mkcmd: command not found
+
+Check whether /usr/local/bin is in your PATH:
+
+bash
+echo "$PATH"
+
+
+If necessary, add it to your PATH:
+
+bash
+export PATH="/usr/local/bin:$PATH"
+
+GitHub download errors
+
+Test the download:
+
+bash
+curl -fL https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/main.py -o /tmp/mkcmd-test
+
+
+If this fails, check your internet connection and GitHub access.
+
+Requirements
+Linux
+Python 3
+curl (for installation)
+sudo privileges (for system-wide installation)
+Contributing
+
+Contributions, bug reports, and suggestions are welcome!
+
+Feel free to open an issue or submit a pull request.
+
+License
+
+See the repository for license information.
