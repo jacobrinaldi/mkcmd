@@ -5,10 +5,6 @@ Make many langues into commands with ease
 
 ## Install
 
-## Automatic Install
-
-``curl -fsSL https://raw.githubusercontent.com/jacobrinaldi/mkcmd/main/install.sh | bash
-``
 
 ### Manual Install
 1. Clone the repository:
