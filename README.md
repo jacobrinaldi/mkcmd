@@ -2,13 +2,7 @@
 
 Make many langues into commands with ease
 
-## Supported Languages
-* **Python** (`.py`) — requires `#!/usr/bin/env python3`
-* **JavaScript** (`.js`) — requires `#!/usr/bin/env node`
-* **Bash** (`.sh`) — requires `#!/usr/bin/env bash`
-* **Ruby** (`.rb`) — requires `#!/usr/bin/env ruby`
-* **Lua** (`.lua`) — requires `#!/usr/bin/env lua`
-* **Php** (`.php`) - requires `#!/usr/bin/env php`
+
 ## Install
 
 **### Automatic install
